@@ -1,0 +1,24 @@
+How to copy by value a composite datatype (array+objects)?
+Arrays,objects,functions are all of object type which comes under composite data type.
+The variables hold data but in case of composite datatype it holds the reference that is the address of the particular value in memory.
+for example:
+var a=10; //here a hold the value 10.
+var b=[10,100];  //here b hold the address
+therefore to copy the data of composite data type we have two methods.
+1)spread operator(...).
+2)iteration.
+Spred operator spreads the elements of that particular array or object and it values are to used to assign to someother variables.
+var a=[1,2,3];
+var b=[...a];
+var b[0]=10;
+console.log(a);  //[1,2,3];
+console.log(b);  //[10,2,3];
+By using iteration we can copy the values to some other variables.
+var a=[1,2,3];
+var b=[];
+for(var i in a){
+b[i]=a[i];
+}
+b[0]=10;
+console.log(a); //[1,2,3]
+console.log(b);  //[10,2,3].

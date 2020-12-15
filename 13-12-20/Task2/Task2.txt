@@ -1,0 +1,16 @@
+HTTP/1.1 has been around for more than a decade. With Google’s SPDY leading the way in 2015, the IETF (Internet Engineering Task Force) gave us HTTP/2, 
+which introduces several features to reduce page load times.
+From a technical point of view, one of the most significant features that distinguishes HTTP/1.1 and HTTP/2 is the binary framing layer, 
+which can be thought of as a part of the application layer in the internet protocol stack. As opposed to HTTP/1.1, which keeps all requests and responses
+in plain text format, HTTP/2 uses the binary framing layer to encapsulate all messages in binary format,
+while still maintaining HTTP semantics, such as verbs, methods, and headers. 
+An application level API would still create messages in the conventional HTTP formats, 
+but the underlying layer would then convert these messages into binary.
+This ensures that web applications created before HTTP/2 can continue functioning as normal when interacting with the new protocol.
+The conversion of messages into binary allows HTTP/2 to try new approaches to data delivery not available in HTTP/1.1,
+ a contrast that is at the root of the practical differences between the two protocols.
+ In HTTP/1.1 the Headers are sent on every request leading to a lot of duplicate data being sent uncompressed across the wire.
+ where as in HTTP/2 Header compression is included by default in HTTP/2 using HPACK.
+ In HTTP/1.1 THE performance optimization it Spriting, concatenating, inlining, domain sharding are some of the optimizations
+ used as a workaround to the ‘six connections per host’ rule 
+ where as in HTTP/2 it Removes the need for unnecessary optimization hacks.

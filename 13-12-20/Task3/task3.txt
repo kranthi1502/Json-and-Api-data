@@ -1,0 +1,18 @@
+Copy by value:
+var a=10;
+var b='kk';
+var x=a;
+var y=b;
+console.log(a,b,x,y);// 10,'kk',10,'kk' .
+here the values are directly copied from one variable to other.
+At this point of time both ‘x’ and ‘a’ contains the value 10. Both ‘y’ and ‘b’ contains the value ‘kk’. 
+However, an important thing to understand here is that even though ‘x’ and ‘a’ as well as ‘y’ and ‘b’ contains the same value they are not connected to each other. 
+It is so because the values are directly copied into the new variables.
+Copy by reference:
+var a=[1,2,3];
+var b=a;
+b[0]=10;
+console.log(a); //[10,2,3];
+At this point the value of a is [1,2,3] but var b is assigned to a as it is a composite data type the b is not assigned to the value of a but it is pointing towards the address of a.
+so if b got changed it will update the values of a.
+

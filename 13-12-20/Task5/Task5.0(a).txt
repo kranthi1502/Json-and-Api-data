@@ -1,0 +1,50 @@
+var cat = {
+ name: 'Fluffy',
+ activities:['play', 'eat cat food'],
+ catFriends:[
+ {
+ name: 'bar',
+ activities:['be grumpy','eat bread omblet'],
+ weight: 8,
+ furcolor: 'white'
+ }, 
+ {
+ name: 'foo',
+ activities: ['sleep', 'pre-sleep naps'],
+ weight: 3
+ }
+ ]
+}
+//adding height&weight of cat
+cat.height=5;
+cat.weight=8;
+//update the fluffy name
+cat.name='Fluffyy';
+var w=0;
+//cat friends activities
+for(var i in cat.catFriends){
+    w+=cat.catFriends[i].weight;
+        console.log(cat.catFriends[i].activities);
+        //console.log(cat.catFriends[i].name);
+}
+//cat friends name
+for(var i in cat.catFriends){
+        console.log(cat.catFriends[i].name);
+}
+//cat friends weight
+console.log(w);
+//activities of all cats
+var activity=[];
+activity.push(cat.activities);
+for(var i in cat.catFriends){
+    activity.push(cat.catFriends[i].activities);
+}
+console.log(activity);
+//adding two more activities.
+for(var i in cat.catFriends){
+        cat.catFriends[i].activities.push('play','drink');
+        console.log(cat.catFriends[i].activities);
+}
+//update the furcolor of bar
+cat.catFriends[0].furcolor='gold';
+console.log(cat.catFriends[0].furcolor)
